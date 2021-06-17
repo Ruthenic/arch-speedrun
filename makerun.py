@@ -17,6 +17,7 @@ default = """<!DOCTYPE HTML>
     <p>Commands used:</p>
     <pre>{3}</pre>
     <p>Runner's comment: {4}</p>
+    <div style="position:relative;margin-bottom:105px;"></div> <!-- Add spacing so the comment doesn't get devoured by the footer -->
 	<div id="footer">
 	</div>
 </body>
