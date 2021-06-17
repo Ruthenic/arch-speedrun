@@ -1,2 +1,3 @@
 content/index.html
 content/run*.html
+!content/runfooter.html

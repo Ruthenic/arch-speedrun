@@ -6,7 +6,7 @@
 	- A working text editor
 5. You must use the original Arch ISO, and include the version of the iso you used (checksum is optional).
 6. Along with your submission, you must include:
-	- A video recorder of your submission (This isn't 1999), captured via:
+	- A video recording of your submission (This isn't 1999), captured via:
 		- A screen recorder, recording a Virtual Machine's windows (Titlebar must be included)
 		- A capture card, capturing a computer's screen
 		- A camera, pointed at the computer's screen (Text ***MUST BE INTELLIGABLE***)
