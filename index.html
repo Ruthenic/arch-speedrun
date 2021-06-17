@@ -3,9 +3,20 @@
 <head>
     <title>Arch Speedrun Leaderboards</title>
     <link rel="stylesheet" type="text/css" href="/css/dark-mode.css">
-    <!--<link rel="stylesheet" type="text/css" href="css/colours.css">-->
+    <script src="/footer.js"></script>
 </head>
 <body>
-	
+	<!--
+	TODO: Add footer for category navigation?
+	TODO: Make fancy
+	TODO: automatically insert runs onto page (using python script?)
+	 -->
+	<!--<p><a href="runs/{page}">{title} - {time}</a></p>-->
+    <script>
+	getFooter()
+    </script>
+	{runs}
+	<div id="footer">
+	</div>
 </body>
 </html>

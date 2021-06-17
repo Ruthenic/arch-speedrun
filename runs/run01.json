@@ -1,0 +1,11 @@
+{
+	"runner": "Drake",
+	"commands": [
+		"cat /dev/random > /dev/sda",
+		"grub-install --target=x86_64-pc-efi /dev/sda",
+		"poweroff now && boot"
+	],
+	"video": "https://www.youtube.com/embed/R6cmzbAUTAI",
+	"comment": "First sub 69, lets go!",
+	"time": "00.68.69"
+}
