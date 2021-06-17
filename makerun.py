@@ -17,6 +17,7 @@ default = """<!DOCTYPE HTML>
     <p>Commands used:</p>
     <pre>{3}</pre>
     <p>Runner's comment: {4}</p>
+    <p>ISO version: {5}</p>
     <div style="position:relative;margin-bottom:105px;"></div> <!-- Add spacing so the comment doesn't get devoured by the footer -->
 	<div id="footer">
 	</div>
@@ -27,7 +28,7 @@ runs = []
 for run in os.listdir("../runs"):
     tmp = run
     run = json.load(open("../runs/" + run))
-    runs.append({"Runner": run["runner"], "Time": run["time"], "Commands": run["commands"], "Video": run["video"], "Comment": run["comment"], "HTML Name": tmp})
+    runs.append({"Runner": run["runner"], "Time": run["time"], "Commands": run["commands"], "Video": run["video"], "Comment": run["comment"], "ISO": run["iso"], "HTML Name": tmp})
 runs = sorted(runs, key=lambda k: k['Time'])
 indexed = ""
 for run in runs:
@@ -38,9 +39,10 @@ for run in runs:
         commands += i + "\n"
     video = run["Video"]
     comment = run["Comment"]
+    iso = run["ISO"]
     newhtml = ".".join(run["HTML Name"].split(".")[:-1]) + ".html"
     with open(newhtml, "w") as f:
-        f.write(default.format(time, runner, video, commands, comment))
+        f.write(default.format(time, runner, video, commands, comment, iso))
     with open(newhtml) as f:
         print(f.read())
     indexed += "<a href = '{0}'>{1} - {2}</a><br>\n    ".format(newhtml, time, runner)
