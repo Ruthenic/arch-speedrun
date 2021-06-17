@@ -27,6 +27,7 @@ for run in os.listdir("../runs"):
     tmp = run
     run = json.load(open("../runs/" + run))
     runs.append({"Runner": run["runner"], "Time": run["time"], "Commands": run["commands"], "Video": run["video"], "Comment": run["comment"], "HTML Name": tmp})
+runs = sorted(runs, key=lambda k: k['Time'])
 indexed = ""
 for run in runs:
     runner = run["Runner"]
