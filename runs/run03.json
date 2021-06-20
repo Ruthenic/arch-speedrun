@@ -25,7 +25,7 @@
 		"systemctl start NetworkManager",
 		"pacman -S neofetch;neofetch"
 	],
-	"video": "https://www.youtube.com/watch?v=_YWzr1WC69w",
+	"video": "https://www.youtube.com//embed/_YWzr1WC69w",
 	"comment": "internet go bbbbbbbbb",
 	"time": "04.04.750",
 	"iso": "archlinux-2021.06.01-x86_64.iso"
