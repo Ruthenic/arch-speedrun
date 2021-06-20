@@ -23,7 +23,7 @@
 		"}",
 		"reboot (exiting chroot dropped the command)",
 		"systemctl start NetworkManager",
-		"pacman -S neofetch;neofetch",
+		"pacman -S neofetch;neofetch"
 	],
 	"video": "https://www.youtube.com/watch?v=_YWzr1WC69w",
 	"comment": "internet go bbbbbbbbb",
