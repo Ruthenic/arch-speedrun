@@ -1,3 +1,9 @@
-content/index.html
-content/run*.html
-!content/runfooter.html
+content/*
+!content/categoryfooter.html
+!content/footer.html
+!content/footer.js
+!content/info.html
+!content/rules.html
+!content/submission.html
+!content/css
+!content/CNAME
