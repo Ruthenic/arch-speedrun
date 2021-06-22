@@ -1,0 +1,90 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <title>04.10.567 by Reese4221</title>
+    <link rel="stylesheet" type="text/css" href="/css/dark-mode.css">
+    <script src="/footer.js"></script>
+</head>
+<body>
+    <script>
+	getFooter("internetfooter.html")
+    </script>
+    <h2>04.10.567 by Reese4221</h2>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/6gnhUx5uQ_8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    <p>Commands used:</p>
+    <pre>fdisk /dev/sda
+(
+g
+n
+enter
+enter
++1G
+n
+enter three times
+t
+1
+enter
+1
+1
+enter
+(mistake) r
+t
+2
+enter
+23
+w
+)
+
+mkfs.ext4 /dev/sda2
+mkfs.vfat /dev/sda1
+mount /dev/sda2 /mnt
+pacstrap /mnt base linux
+(changed mind and ctrl C)
+
+nano /etc/pacman.conf
+(changed ParralelDownloads to 10 and enabled it)
+
+pacstrap /mnt base linux
+
+arch-chroot /mnt
+(mistake) nano /etc/locale.gen
+pacman -S nano networkmanager
+
+nano /etc/locale.gen
+(
+added en_US.UTF-8 UTF-8
+to the top of the file
+)
+locale-gen
+nano /etc/locale.conf
+(
+added LANG=en_US.UTF-8
+)
+pacman -S refind
+passwd
+(failed) refind-install
+mkdir /efi
+mount /dev/sda1 /efi
+refind-install
+nano /boot/refind_linux.conf
+(
+removed the ro in "Boot with minimal options"
+)
+exit
+reboot
+tab
+down arrow thrice
+enter
+root
+e
+systemctl start NetworkManager
+pacman -S neofetch
+neofetch
+</pre>
+    <p>Runner's comment: <a href = "https://media.tenor.co/videos/9273ff9f9f3073d0c4a1756a1b35646d/mp4">Racoon water</a></p>
+    <p>ISO version: archlinux-2021.06.01-x86_64.iso</p>
+    <div style="position:relative;margin-bottom:105px;"></div> <!-- Add spacing so the comment doesn't get devoured by the footer -->
+	<div id="footer">
+	</div>
+</body>
+</html>
