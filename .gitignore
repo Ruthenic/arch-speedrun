@@ -6,4 +6,5 @@ content/*
 !content/rules.html
 !content/submission.html
 !content/css
+!content/css/*
 !content/CNAME
