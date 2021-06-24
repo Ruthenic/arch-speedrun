@@ -28,7 +28,7 @@
 		"pacman -Sy neofetch <<<y ; neofetch"
 	],
 	"video": "https://www.youtube.com/embed/D8LlGaaqNNM",
-	"comment": "<i>None</i>",
+	"comment": "",
 	"time": "02.45.360",
 	"iso": "archlinux-2021.06.01-x86_64.iso ",
 	"category": "internet"
