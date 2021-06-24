@@ -1,7 +1,7 @@
 {
 	"runner": "j0057",
 	"commands": [
-			"sgdisk /dev/sda -n 1:0:+1022M -t 1:ef00 -n 2:0 -t 2:8300",
+		"sgdisk /dev/sda -n 1:0:+1022M -t 1:ef00 -n 2:0 -t 2:8300",
 		"mkfs.ext4 /dev/sda2",
 		"mount !$ /mnt",
 		"mkdir /mnt/boot",
