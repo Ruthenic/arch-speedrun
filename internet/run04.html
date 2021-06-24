@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <title>02.45.360 by j0057</title>
+    <link rel="stylesheet" type="text/css" href="/css/dark-mode.css">
+    <script src="/footer.js"></script>
+</head>
+<body>
+    <script>
+	getFooter("../internetfooter.html")
+    </script>
+    <h2>02.45.360 by j0057</h2>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/D8LlGaaqNNM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    <p>Commands used:</p>
+    <pre>sgdisk /dev/sda -n 1:0:+1022M -t 1:ef00 -n 2:0 -t 2:8300
+mkfs.ext4 /dev/sda2
+mount !$ /mnt
+mkdir /mnt/boot
+mkfs.vfat /dev/sda1
+mount !$ /mnt/boot
+vim /etc/pacman.conf        8j  o   ILoveCandy  Color   ParallelDownloads=25
+pacstrap /mnt base linux vim
+genfstab /mnt >/mnt/etc/fstab
+cp /etc/systemd/network/20-ethernet.network /mnt/etc/systemd/system
+arch-chroot /mnt
+cd etc
+ln -s /usr/share/zoneinfo/Europe/Amsterdam localtime
+vim locale.gen      176j x
+locale-gen
+echo LANG=en_US.UTF-8   >locale.conf
+echo letsgo             >hostname
+echo EDITOR=vim         >>environment
+passwd -d root
+systemctl enable systemd-{networkd,resolved}
+^D
+efibootmgr  -c  -l vmlinuz-linux   -u   'rw root=/dev/sda2 initrd=initramfs-linux.img'
+reboot
+root
+pacman -Sy neofetch <<<y ; neofetch
+</pre>
+    <p>Runner's comment: </p>
+    <p>ISO version: archlinux-2021.06.01-x86_64.iso </p>
+    <div style="position:relative;margin-bottom:105px;"></div> <!-- Add spacing so the comment doesn't get devoured by the footer -->
+	<div id="footer">
+	</div>
+</body>
+</html>
