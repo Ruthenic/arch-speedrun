@@ -36,7 +36,7 @@ systemctl enable systemd-{networkd,resolved}
 efibootmgr  -c  -l vmlinuz-linux   -u   'rw root=/dev/sda2 initrd=initramfs-linux.img'
 reboot
 root
-pacman -Sy neofetch <<<y ; neofetch
+pacman -Sy neofetch <<<y \; neofetch
 </pre>
     <p>Runner's comment: </p>
     <p>ISO version: archlinux-2021.06.01-x86_64.iso </p>
