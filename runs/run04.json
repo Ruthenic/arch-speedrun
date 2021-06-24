@@ -25,7 +25,7 @@
 		"efibootmgr  -c  -l vmlinuz-linux   -u   'rw root=/dev/sda2 initrd=initramfs-linux.img'",
 		"reboot",
 		"root",
-		"pacman -Sy neofetch <<<y \\; neofetch"
+		"pacman -Sy neofetch &#60;&#60;&#60;y \\; neofetch"
 	],
 	"video": "https://www.youtube.com/embed/D8LlGaaqNNM",
 	"comment": "",
